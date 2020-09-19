@@ -1,0 +1,1 @@
+# PreventScreenCaptureIniOS14
