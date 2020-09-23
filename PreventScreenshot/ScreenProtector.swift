@@ -25,14 +25,14 @@ class ScreenProtector {
     @objc private func didDetectRecording() {
         DispatchQueue.main.async {
             self.hideScreen()
-            self.presentwarningWindow("Screen recording is not allowed at our app!")
+            self.presentwarningWindow("Screen recording is not allowed in our app!")
         }
     }
 
 @objc private func didDetectScreenshot() {
     DispatchQueue.main.async {
         self.hideScreen()
-        self.presentwarningWindow( "Screenshot is not allowed at our app. Please follow the instruction to delete the screenshot from your photo album!")
+        self.presentwarningWindow( "Screenshots are not allowed in our app. Please follow the instruction to delete the screenshot from your photo album!")
 //        self.grandAccessAndDeleteTheLastPhoto()
     }
 }

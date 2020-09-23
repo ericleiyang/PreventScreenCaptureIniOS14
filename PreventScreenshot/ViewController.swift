@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     let images: [UIImage] = [UIImage(named: "selfie1")!,
-                             UIImage(named: "selfie2")!]
+                             UIImage(named: "selfie2")!,
+                             UIImage(named: "selfie3")!,
+                             UIImage(named: "selfie4")!]
     enum Section {
         case main
     }
@@ -53,7 +55,7 @@ extension ViewController {
 
         let cellRegistration = UICollectionView.CellRegistration<ImageCollectionViewCell, Int> { (cell, indexPath, identifier) in
             // Populate the cell with image
-            cell.configure(image: self.images[indexPath.row % 2])
+            cell.configure(image: self.images[indexPath.row % 4])
         }
 
         dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
